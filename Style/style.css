@@ -1,11 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
 body{
+    background-color: #545454;
+    margin:0;
+    padding:0;
+    font-family: 'titillium web', sans-serif;
+
+}
+
+.downarrow{
+    position: fixed;
+    bottom: -140%;
+    right: 46%;
+    /* background-color: #545454; */
+    /* border-radius: 50%; */
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+ul.menubar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     background-color: #3d3d3d;
-    
+    border-color: #545454;
+}
+ul.menubar > li{
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color:#3d3d3d;
+}
+ul.menubar > li > a{
+    display: block;
+    color: #F3eFF5;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+.highlighted{
+    background-color: #224AC4;
+}
+
+.bodyContainer{
+    width: 100%;
+    height: 100%;
+    /* background-color: #ff0000; */
+    margin-top: 20vh;
 }
 h1{
-    text-decoration: underline;
-    color: #c91c1c;
+    text-decoration: none;
+    color: #224AC4;
     text-align: center;
-    font-size: 50px;
+    font-size: 24px;
     margin-top: 100px;
+    transition: ease-out 0.1s;
+    word-wrap: break-word;
+}
+.blue{
+    z-index: 0;
+    text-decoration: none;
+    color: #224AC4;
+}
+.text-top{
+    margin-top: -2%;
+}
+.text-bottom{
+    margin-bottom: 0%;
+}
+/* p{
+    text-decoration: none; 
+    color: #F3eFF5;
+    text-align: center;
+    transition: ease-out 0.1s;
+     word-wrap: break-word;
+} */
+
+.color{
+    /* CSS HEX */
+--absolute-zero: #224ac4ff;
+--onyx: #3d3d3dff;
+--davys-grey: #545454ff;
+--magnolia: #f3eff5ff;
+
+/* CSS HSL */
+--absolute-zero: hsla(225, 70%, 45%, 1);
+--onyx: hsla(0, 0%, 24%, 1);
+--davys-grey: hsla(0, 0%, 33%, 1);
+--magnolia: hsla(280, 23%, 95%, 1);
+}
+
+/*card style*/
+.card{
+    background-color: #3d3d3d;
+    position: relative;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 11px;
+    margin: 0 auto;
+    width: 75%;
+    height: fit-content;
+    padding: 20px;
+    transition: ease-out 0.1s;
+    margin-bottom: 10%;
+}
+
+/*make a card appear on top of another card to act as a title*/
+.cardTitle{
+    box-shadow: none;
+    z-index: -1;
+    /* background-color: #224AC4; */
+    margin: 0 auto;
+    width: fit-content;
+    height: 20%;
+    /* display:flex; */
+    /* padding: 20px; */
+    transform: translate(0px, -90%);
+}
+.cardHandle{
+    z-index: 1;
+    box-shadow: none;
+    /* background-color: #224AC4; */
+    margin: 0 auto;
+    width: fit-content;
+    height: 20%;
+    /* padding: 20px; */
+    transform: translate(0px, 90%);
+}
+
+.cardHandle:hover{
+    cursor: pointer;
+}
+.coverimg{
+    width:100%;
+    height: auto;
+    filter: blur(2px);
+    opacity: 0.6;
+}
+.imgcontainer{
+    position: relative;
+}
+.img-centered{
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    /* background-color: #224AC4; */
+}
+
+.myimg{
+    /* position:absolute; */
+
+    object-fit: scale-down;
+    height:auto;
+    border-radius: 11px;   
+    height: auto;
+    width:20%;
+    margin-left: 3%;
+}
+
+.cardContent{
+    display:flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.aboutText{
+    text-align: left;
+    align-items: left;
+    color: #F3eFF5;
+    font-size: 48px;
+    line-height: 135%;
+    top: 10%;
+    left: 28%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    word-wrap: break-word;
+}
+
+
+
+
+
+
+/*animation*/
+.animated{
+    animation-duration: 1s;
+    animation-name: updown;
+    animation-iteration-count: infinite;
+}
+@keyframes updown{
+    0%{
+        transform: translate(0px, 0px);
+    }
+    50%{
+        transform: translate(0px, -10px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
 }
