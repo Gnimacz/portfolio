@@ -68,6 +68,9 @@ h1{
     transition: ease-out 0.1s;
     word-wrap: break-word;
 }
+.largefont{
+    font-size: 40px;
+}
 .blue{
     z-index: 0;
     text-decoration: none;
@@ -231,6 +234,11 @@ h1{
     display:flex;
     flex-direction: column;
 }
+.flexrow{
+    display:flex;
+    flex-direction: row;
+    column-gap: 50px;
+}
 
 .skillList li{
     margin-bottom: 10px;
@@ -265,6 +273,39 @@ h1{
     column-gap: 25%;
 }
 
+.aboutImage{
+    margin-top: -2%;
+    margin-bottom: 4%;
+    flex: 5 1 100%;
+}
+
+.projectRole{
+    font-weight: bold;
+    color: #F3eFF5;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+.projectText{
+    color: #F3eFF5;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.projectTextHolder{
+    margin-top: -7%;
+}
+.projectTextList li{
+    color: #F3eFF5;
+    list-style: square;
+    list-style-position: inside;
+    text-align: center;
+}
 
 
 
